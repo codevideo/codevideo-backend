@@ -1,0 +1,100 @@
+version: 2.1
+
+workflows:
+  test:
+    jobs:
+      - test:
+          context:
+            - codevideo
+          filters:
+            branches:
+              only:
+                - develop
+  release:
+    jobs:
+      - release:
+          context:
+            - codevideo
+          filters:
+            branches:
+              only:
+                - main
+  publish:
+    jobs:
+      - publish:
+          context:
+            - codevideo
+          filters:
+            branches:
+              only:
+                - release
+
+jobs:
+  test:
+    docker:
+      - image: node:latest
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "0e:de:f3:e5:2d:85:e2:7d:3b:d3:70:af:e9:db:e6:3a"
+      - run:
+          name: Install dependencies (root)
+          command: npm install
+      - run:
+          name: Run Tests
+          command: npm run test
+      - store_test_results:
+          path: coverage/lcov.info
+      - store_artifacts:
+          path: coverage
+      - run: 
+          name: Install CodeCov
+          command: npm install codecov -g
+      - run: 
+          name: Upload Coverage Results to CodeCov
+          command: codecov -t $CODECOV_TOKEN
+      - run:
+          name: Merge to main branch
+          command: |
+            git config --global user.email $GIT_USER_EMAIL
+            git config --global user.name $GIT_USER_NAME
+            git checkout main
+            GIT_MERGE_AUTOEDIT=no git merge develop
+            git push origin main
+  release:
+    docker:
+      - image: node:latest
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "0e:de:f3:e5:2d:85:e2:7d:3b:d3:70:af:e9:db:e6:3a"
+      - run: 
+          name: Install dependencies (npm install)
+          command: npm install
+      - run: 
+          name: Build distribution version (npm run build)
+          command: npm run build
+      - run: 
+          name: Merge to release branch with new version as git tag
+          command: |
+            version_string=$(grep '"version":' package.json)
+            version=$(echo "$version_string" | sed -E 's/.*"([^"]+)".*/\1/')
+            git config --global user.email $GIT_USER_EMAIL
+            git config --global user.name $GIT_USER_NAME
+            git checkout release
+            GIT_MERGE_AUTOEDIT=no git merge main
+            git tag -a $version -m $version
+            git push origin release
+  publish:
+    docker:
+      - image: node:latest
+    steps:
+      - checkout
+      - run:
+          name: Login to npm
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+      - run:
+          name: Publish with npm (npm publish --access public)
+          command: npm publish --access public

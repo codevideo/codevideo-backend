@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1672313678042" clover="3.2.0">
+  <project timestamp="1672313678042" name="All files">
+    <metrics statements="100" coveredstatements="100" conditionals="29" coveredconditionals="29" methods="13" coveredmethods="13" elements="142" coveredelements="142" complexity="0" loc="100" ncloc="100" packages="5" files="9" classes="9"/>
+    <package name="src">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="codeToVideo.ts" path="/Users/chris/enterprise/codevideo-backend/src/codeToVideo.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.canvas">
+      <metrics statements="87" coveredstatements="87" conditionals="29" coveredconditionals="29" methods="8" coveredmethods="8"/>
+      <file name="animateCanvas.ts" path="/Users/chris/enterprise/codevideo-backend/src/canvas/animateCanvas.ts">
+        <metrics statements="30" coveredstatements="30" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="12" type="stmt"/>
+        <line num="42" count="12" type="stmt"/>
+        <line num="43" count="12" type="stmt"/>
+        <line num="44" count="12" type="stmt"/>
+        <line num="48" count="342" type="stmt"/>
+        <line num="50" count="342" type="stmt"/>
+        <line num="60" count="342" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="123" type="stmt"/>
+        <line num="64" count="342" type="stmt"/>
+        <line num="71" count="342" type="stmt"/>
+        <line num="79" count="342" type="stmt"/>
+        <line num="86" count="342" type="stmt"/>
+        <line num="87" count="342" type="stmt"/>
+        <line num="89" count="12" type="stmt"/>
+        <line num="90" count="12" type="stmt"/>
+        <line num="94" count="3" type="stmt"/>
+        <line num="95" count="3" type="stmt"/>
+      </file>
+      <file name="colorCodeCharacter.ts" path="/Users/chris/enterprise/codevideo-backend/src/canvas/colorCodeCharacter.ts">
+        <metrics statements="13" coveredstatements="13" conditionals="19" coveredconditionals="19" methods="4" coveredmethods="4"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="15" count="342" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="45" type="stmt"/>
+        <line num="33" count="297" type="stmt"/>
+        <line num="36" count="3759" type="stmt"/>
+        <line num="39" count="297" type="cond" truecount="2" falsecount="0"/>
+        <line num="40" count="219" type="stmt"/>
+        <line num="51" count="78" type="cond" truecount="2" falsecount="0"/>
+        <line num="54" count="78" type="cond" truecount="4" falsecount="0"/>
+        <line num="55" count="192" type="stmt"/>
+        <line num="57" count="78" type="stmt"/>
+        <line num="58" count="642" type="stmt"/>
+        <line num="61" count="78" type="stmt"/>
+      </file>
+      <file name="prepareCanvas.ts" path="/Users/chris/enterprise/codevideo-backend/src/canvas/prepareCanvas.ts">
+        <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="37" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+      </file>
+      <file name="runTypoLogic.ts" path="/Users/chris/enterprise/codevideo-backend/src/canvas/runTypoLogic.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="342" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="114" type="stmt"/>
+        <line num="17" count="228" type="stmt"/>
+        <line num="18" count="228" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="114" type="stmt"/>
+        <line num="21" count="228" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="114" type="stmt"/>
+        <line num="26" count="228" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="210" type="stmt"/>
+        <line num="33" count="18" type="stmt"/>
+        <line num="36" count="18" type="stmt"/>
+        <line num="38" count="18" type="stmt"/>
+        <line num="39" count="45" type="stmt"/>
+        <line num="40" count="45" type="stmt"/>
+        <line num="41" count="45" type="stmt"/>
+        <line num="44" count="18" type="stmt"/>
+        <line num="45" count="63" type="stmt"/>
+        <line num="46" count="63" type="stmt"/>
+        <line num="47" count="63" type="stmt"/>
+        <line num="51" count="18" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.canvas.utils">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="drawCircle.ts" path="/Users/chris/enterprise/codevideo-backend/src/canvas/utils/drawCircle.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.constants">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Constants.ts" path="/Users/chris/enterprise/codevideo-backend/src/constants/Constants.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.utils">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="getRandomInt.ts" path="/Users/chris/enterprise/codevideo-backend/src/utils/getRandomInt.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="45" type="stmt"/>
+      </file>
+      <file name="sleep.ts" path="/Users/chris/enterprise/codevideo-backend/src/utils/sleep.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="465" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
