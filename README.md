@@ -18,4 +18,6 @@ npm install --save @fullstackcraftllc/codevideo-backend
 
 ## Usage
 
-Coming shortly.
+Usage in an Express POST handler: (this is actually exactly how the backend handler from [codevideo.io](https://codevideo.io) is implemented)
+
+Coming shortly!
