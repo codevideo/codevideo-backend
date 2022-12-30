@@ -1,6 +1,6 @@
 {
   "name": "@fullstackcraftllc/codevideo-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The backend engine to create videos on codevideo.io",
   "type": "module",
   "main": "dist/index.js",
