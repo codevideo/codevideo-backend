@@ -4,7 +4,7 @@ import json from '@rollup/plugin-json';
 export default {
   input: 'src/index.ts',
   output: {
-    file: 'dist/esm/index.js',
+    file: 'dist/index.js',
     format: 'module',
     sourcemap: true,
     strict: false,
